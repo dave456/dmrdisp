@@ -8,7 +8,6 @@ all: newdisp
 
 newdisp: newdisp.o
 	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
-	scp $@ dave@192.168.1.73:/home/dave
 
 %.o : %.c
 	$(CC) $(CFLAGS) $< -c
